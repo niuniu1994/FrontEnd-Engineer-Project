@@ -1,3 +1,4 @@
+// Element of the connexion Card
 .connexion_card{
     border-radius: 1rem;
 }
@@ -10,6 +11,7 @@
     margin-right: 0.5em;
 }
 
+//Section of the card
 .container{
     justify-content: center;
     height: 55.7em;
@@ -17,18 +19,22 @@
     align-items: center;
 }
 
+//logo
 img{
     justify-content: center; 
 }
 
+//color of button
 .btn-style{
     background-color: #0379AA;
 }
 
+//color of footer
 .foot-style{
     background-color: #0379AA;
 }
 
+//color of the link
 a{
     color: #0379AA;
 }
