@@ -34,7 +34,9 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/Js/nav-bar-file.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -1,0 +1,64 @@
+// Element of the connexion Card
+
+.connexion_card{
+    border-radius: 1rem;
+    margin-left: 4em;
+    margin-top: 2em;
+    padding-bottom: 3.5em;
+    width: 53em;
+}
+
+.position{
+    justify-content: right;
+    align-items: right;
+ 
+}
+
+
+.input_form{
+    padding-right: 2em;
+}
+
+.rememberbox_form{
+    margin-right: 0.5em;
+}
+
+//Section of the card
+.container{
+
+}
+
+//logo
+img{
+    // justify-content: center; 
+    margin-left: 14em;
+}
+
+//color of button
+.btn-style{
+    background-color: #0379AA;
+    height: 3em;
+    margin-top: 1.5em;
+}
+
+.btn-style-google{
+   padding-left: 12em!important;
+}
+
+//color of the link
+a{
+    color: #0379AA;
+}
+
+input{
+    height: 3em;
+}
+
+.label_position{
+    margin-left: 0.2em;
+    float: left;
+    margin-bottom: 0.5em;
+}
+
+
+
