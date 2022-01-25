@@ -1,35 +1,23 @@
 // Element of the connexion Card
-
 .connexion_card{
     border-radius: 1rem;
     margin-left: 4em;
     margin-top: 2em;
-    padding-bottom: 3.5em;
     width: 53em;
 }
 
-.position{
-    justify-content: right;
-    align-items: right;
- 
-}
-
-
 .input_form{
     padding-right: 2em;
-}
-
-.rememberbox_form{
-    margin-right: 0.5em;
 }
 
 //color of button
 .btn-style{
     background-color: #0379AA;
     height: 3em;
-    margin-top: 1.5em;
+    margin-top: 1em;
 }
 
+//sign up logo button
 .btn-style-google{
    padding-left: 12em!important;
 }
@@ -39,28 +27,53 @@ a{
     color: #0379AA;
 }
 
+// epaisseur des inputs
 input{
     height: 3em;
 }
 
+//position des labels au dessus des inputs
 .label_position{
     margin-left: 0.2em;
     float: left;
     margin-bottom: 0.5em;
 }
 
+// Position de l'image de decoration
 .img_descipt_left{
-    margin-left: -13em;
+    margin-left: -3em;
 }
 
+// position du text de decoration par rapport à l'image
 .txt_descript_img{
-    margin-left: -6em;
+    margin-left: -5em;
+    margin-right: 2em;
     margin-top: 2em;
 }
 
+// gestion de la deuxième colonne et positionnement des élements
 .row-style{
-    margin-top: 2em;
-    margin-bottom: 10em;
+    margin-left: -10em;
+    padding-top: 4em;
+    margin-bottom: 4em;
+}
+
+// taille de l'horloge tres petite
+// configuration pour augmentation de la taille de l'horloge
+.img_descipt_horloge{
+    margin-left: -4.9em;
+}
+
+// positionnement du texte au pied de la carte
+.label-style-foot{
+    padding-top: 1.5em;
+}
+
+// texte de decoration image 1
+.txt_descript_img1{
+    padding-top: 3em;
+    margin-left: -5em;
+    margin-right: 2em;
 }
 
 
