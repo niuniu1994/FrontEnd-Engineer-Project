@@ -8,6 +8,8 @@ import { SignInPageComponent } from './view/pages/sign-in-page/sign-in-page.comp
 import { FooterComponent } from './view/components/footer/footer.component';
 import { NavBarComponent } from './view/components/nav-bar/nav-bar.component';
 import { HomePageComponent } from './view/pages/home-page/home-page.component';
+import { CardComponent } from './view/components/card/card.component';
+import { ChevronsComponent } from './view/components/icons/chevrons/chevrons.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HomePageComponent } from './view/pages/home-page/home-page.component';
     SignInPageComponent,
     FooterComponent,
     NavBarComponent,
-    HomePageComponent
+    HomePageComponent,
+    CardComponent,
+    ChevronsComponent
   ],
   imports: [
     BrowserModule,
