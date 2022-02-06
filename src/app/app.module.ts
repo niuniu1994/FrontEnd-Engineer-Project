@@ -10,6 +10,7 @@ import { NavBarComponent } from './view/components/nav-bar/nav-bar.component';
 import { HomePageComponent } from './view/pages/home-page/home-page.component';
 import { CardComponent } from './view/components/card/card.component';
 import { ChevronsComponent } from './view/components/icons/chevrons/chevrons.component';
+import { UserCardComponent } from './view/components/user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ChevronsComponent } from './view/components/icons/chevrons/chevrons.com
     NavBarComponent,
     HomePageComponent,
     CardComponent,
-    ChevronsComponent
+    ChevronsComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 .card-style{
     width: 36rem; 
     height: 23rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-left: 1rem;
     border-radius: 25px;
 }
@@ -25,4 +25,8 @@ h3{
 .img-style{
     float: right;
     margin-right: 1.5rem;
+}
+
+.container{
+    max-width: 100%;
 }

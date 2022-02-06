@@ -10,5 +10,19 @@
 }
 
 .btn-group-design{
-    padding-right: -12em !important;
+    margin-right: 1em !important;
+    width: 26rem;
+    height: 4.5rem;
+    font-weight: bold;
+    background-color: #adb5bd;
+    border-radius: 12px;
+}
+
+.dropdown-menu.dropdown-menu-dark {
+    min-width: 90%;
+    text-align: center;
+}
+
+.nav-link{
+    font-weight: bold;
 }
