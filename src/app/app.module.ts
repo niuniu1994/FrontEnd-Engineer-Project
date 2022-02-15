@@ -11,6 +11,12 @@ import { HomePageComponent } from './view/pages/home-page/home-page.component';
 import { CardComponent } from './view/components/card/card.component';
 import { ChevronsComponent } from './view/components/icons/chevrons/chevrons.component';
 import { UserCardComponent } from './view/components/user-card/user-card.component';
+import { ListUserComponent } from './view/pages/manage-user/list-user/list-user.component';
+import { DetailsUserComponent } from './view/pages/manage-user/details-user/details-user.component';
+import { LibraryComponent } from './view/pages/manage-books/library/library.component';
+import { FamousBooksComponent } from './view/pages/manage-books/famous-books/famous-books.component';
+import { DetailsBooksComponent } from './view/pages/manage-books/details-books/details-books.component';
+import { TablesComponent } from './view/components/tables/tables.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,13 @@ import { UserCardComponent } from './view/components/user-card/user-card.compone
     HomePageComponent,
     CardComponent,
     ChevronsComponent,
-    UserCardComponent
+    UserCardComponent,
+    ListUserComponent,
+    DetailsUserComponent,
+    LibraryComponent,
+    FamousBooksComponent,
+    DetailsBooksComponent,
+    TablesComponent
   ],
   imports: [
     BrowserModule,
