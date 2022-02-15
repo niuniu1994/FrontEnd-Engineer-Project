@@ -17,6 +17,8 @@ import { LibraryComponent } from './view/pages/manage-books/library/library.comp
 import { FamousBooksComponent } from './view/pages/manage-books/famous-books/famous-books.component';
 import { DetailsBooksComponent } from './view/pages/manage-books/details-books/details-books.component';
 import { TablesComponent } from './view/components/tables/tables.component';
+import { FiltersComponent } from './view/components/filters/filters.component';
+import { SearchBarComponent } from './view/components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { TablesComponent } from './view/components/tables/tables.component';
     LibraryComponent,
     FamousBooksComponent,
     DetailsBooksComponent,
-    TablesComponent
+    TablesComponent,
+    FiltersComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
