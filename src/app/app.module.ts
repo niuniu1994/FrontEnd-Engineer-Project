@@ -19,6 +19,9 @@ import { DetailsBooksComponent } from './view/pages/manage-books/details-books/d
 import { TablesComponent } from './view/components/tables/tables.component';
 import { FiltersComponent } from './view/components/filters/filters.component';
 import { SearchBarComponent } from './view/components/search-bar/search-bar.component';
+import { BookCardComponent } from './view/components/book-card/book-card.component';
+import { StarsRateComponent } from './view/components/stars-rate/stars-rate.component';
+import { CardSliderComponent } from './view/components/card-slider/card-slider.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { SearchBarComponent } from './view/components/search-bar/search-bar.comp
     DetailsBooksComponent,
     TablesComponent,
     FiltersComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    BookCardComponent,
+    StarsRateComponent,
+    CardSliderComponent
   ],
   imports: [
     BrowserModule,
