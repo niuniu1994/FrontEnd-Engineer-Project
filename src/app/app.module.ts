@@ -22,6 +22,7 @@ import { SearchBarComponent } from './view/components/search-bar/search-bar.comp
 import { BookCardComponent } from './view/components/book-card/book-card.component';
 import { StarsRateComponent } from './view/components/stars-rate/stars-rate.component';
 import { CardSliderComponent } from './view/components/card-slider/card-slider.component';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -48,9 +49,10 @@ import { CardSliderComponent } from './view/components/card-slider/card-slider.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    IvyCarouselModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
