@@ -23,6 +23,7 @@ import { BookCardComponent } from './view/components/book-card/book-card.compone
 import { StarsRateComponent } from './view/components/stars-rate/stars-rate.component';
 import { CardSliderComponent } from './view/components/card-slider/card-slider.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
