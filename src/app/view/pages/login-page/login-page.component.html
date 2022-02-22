@@ -1,5 +1,5 @@
-<section>
 
+<section>
     <section class="container">
         <!-- card connexion -->
         <div class="col-12 col-md-8 col-lg-6 col-xl-4">
@@ -12,28 +12,30 @@
                     <!-- title box -->
                     <h3 class="mb-3">Login into your account</h3>
 
-                    <!-- email input -->
-                    <div class="input-group flex-nowrap">
-                        <span class="input-group-text input_form"> </span>
-                        <input type="text" class="shadow form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                    </div>
-                    
-                    <!-- password input -->
-                    <div class="input-group flex-nowrap">
-                        <span class="input-group-text input_form" id="addon-wrapping"> </span>
-                        <input type="text" class="shadow form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                    </div>
+                    <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+                        <!-- email input -->
+                        <div class="input-group flex-nowrap mb-4">
+                            <span class="input-group-text input_form"> </span>
+                            <input type="text" class="shadow form-control" formControlName="username" placeholder="username" aria-label="username" aria-describedby="addon-wrapping">
+                        </div>
+                        
+                        <!-- password input -->
+                        <div class="input-group flex-nowrap mb-4">
+                            <span class="input-group-text input_form" id="addon-wrapping"> </span>
+                            <input type="password" class="shadow form-control" formControlName="password" placeholder="password" aria-label="password" aria-describedby="addon-wrapping">
+                        </div>
 
-                    <!-- Checkbox -->
-                    <div class="form-check d-flex justify-content-start mb-2">
-                        <input class="shadow form-check-input rememberbox_form" type="checkbox" value="" id=""/>
-                        <label class="form-check-label" for=""> Remember Me </label>
-                    </div>
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-start mb-2 mb-4">
+                            <input class="shadow form-check-input rememberbox_form" type="checkbox" value="" id=""/>
+                            <label class="form-check-label" for=""> Remember Me </label>
+                        </div>
 
-                    <!-- login button -->
-                    <div class="d-grid gap-2">
-                        <button class="shadow btn btn-style" type="submit">Login</button>
-                    </div>
+                        <!-- login button -->
+                        <div class="d-grid gap-2">
+                            <button class="shadow btn btn-style" type="submit">Login</button>
+                        </div>
+                    </form>
 
                     <!-- Checkbox -->
                     <div class="mb-2">
@@ -43,7 +45,5 @@
             </div>
         </div>
     </section>
-    
-       
 </section>
 
