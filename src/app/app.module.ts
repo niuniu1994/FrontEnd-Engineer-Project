@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BookComponentDetailsComponent } from './view/components/book-component-details/book-component-details.component';
 import { CommentairesComponent } from './view/components/commentaires/commentaires.component';
+import { PopupContainsComponent } from './view/components/popup-contains/popup-contains.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { CommentairesComponent } from './view/components/commentaires/commentair
     StarsRateComponent,
     CardSliderComponent,
     BookComponentDetailsComponent,
-    CommentairesComponent
+    CommentairesComponent,
+    PopupContainsComponent
   ],
   imports: [
     BrowserModule,

@@ -36,7 +36,8 @@
             ],
             "scripts": [
               "src/assets/Js/nav-bar-file.js",
-              "./node_modules/@popperjs/core/dist/umd/popper.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/bootstrap/js/dist/popover.js"
             ]
           },
           "configurations": {
