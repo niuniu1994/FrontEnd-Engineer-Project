@@ -1,8 +1,9 @@
+<app-nav-bar></app-nav-bar> 
 <section class="container">
-    <div class="card mt-2 ms-2 me-2 h-auto">
+    <div class="card mt-2 ms-2 me-2 h-auto shadow card-style border-0">
         <div class="card-body">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-md-3">
                     <img src="https://pdf.1001ebooks.com/wp-content/uploads/2020/05/Andre%CC%81-Brink-Une-Saison-Blanche-Et-Seche-.jpg" class="border border-4 ms-4 shadow img-style" alt="">
                     <div class="ms-4 mb-4">
                         <app-stars-rate></app-stars-rate>
@@ -11,13 +12,8 @@
                     <div class="ms-4">
                         <p class="text-muted txt-style row-bottom-margin">25 000 avis . Ajouté il y'a 1 mois</p>
                     </div>
-                    
-                    
-                    
-                    
-                    
                 </div>
-                <div class="col-sm-9">
+                <div class="col-md-9">
                     <p class="text-muted txt-style row-bottom-margin">DESCRIPTION</p>
                     <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim 
                         sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligulamassa, varius a, 
@@ -32,19 +28,24 @@
                             <h5 class="">André Brink</h5>
 
                             <p class="text-muted txt-style row-bottom-margin mt-4">DATE DE PUBLICATION</p>
-                            <h6 class="">Avril 2018</h6>
+                            <h5 class="">Avril 2018</h5>
                         </div>
                         <div class="col mt-3">
                             <p class="text-muted txt-style row-bottom-margin">MAISON D'EDITION</p>
                             <h5 class="">Edition d'Or</h5>
 
                             <p class="text-muted txt-style row-bottom-margin mt-4">SUJET</p>
-                            <span class="badge bg-info text-dark">Geographie</span>
+                            <h6><span class="badge bg-info text-dark">Geographie</span></h6>
                         </div>
-                    </div>    
-                    
+                        
+                    </div> 
+                    <div class="float-end mt-5 me-3">
+                        <button type="button" class="btn btn-outline-primary btn-sm ">Lire</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm ms-2">supprimer</button>
+                    </div>   
                 </div>
             </div>
         </div>
     </div>
+<app-commentaires></app-commentaires>
 </section>

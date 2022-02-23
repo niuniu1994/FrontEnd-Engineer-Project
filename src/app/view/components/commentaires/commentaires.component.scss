@@ -2,18 +2,6 @@
     font-weight: 500;
 }
 
-.row-bottom-margin{ 
-    margin-bottom: 0.1em;
-}
-
-.img-style{
-    width: 12em;
-}
-
-.card-style{
-    border-radius: 2em;
-}
-
 hr{
     margin-top: 0.3em;
 }
@@ -27,5 +15,13 @@ hr{
 }
 
 .commentaires-style{
-    height: 30em;
+    height: 20em;
+}
+
+.row-bottom-margin{ 
+    margin-bottom: 0.1em;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
