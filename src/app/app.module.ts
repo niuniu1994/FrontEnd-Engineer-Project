@@ -27,6 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BookComponentDetailsComponent } from './view/components/book-component-details/book-component-details.component';
 import { CommentairesComponent } from './view/components/commentaires/commentaires.component';
 import { PopupContainsComponent } from './view/components/popup-contains/popup-contains.component';
+import { GestionLivresComponent } from './view/components/Livres/gestion-livres/gestion-livres.component';
+import { LivresCardComponent } from './view/components/Livres/livres-card/livres-card.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { PopupContainsComponent } from './view/components/popup-contains/popup-c
     CardSliderComponent,
     BookComponentDetailsComponent,
     CommentairesComponent,
-    PopupContainsComponent
+    PopupContainsComponent,
+    GestionLivresComponent,
+    LivresCardComponent
   ],
   imports: [
     BrowserModule,
