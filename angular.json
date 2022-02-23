@@ -36,10 +36,7 @@
             ],
             "scripts": [
               "src/assets/Js/nav-bar-file.js",
-              "./node_modules/@popperjs/core/dist/umd/popper.min.js",
-              "src/assets/vendors/lightslider.js",
-              "src/assets/vendors/script.js",
-              "src/assets/vendors/jquery-3.6.0.js"
+              "./node_modules/@popperjs/core/dist/umd/popper.min.js"
             ]
           },
           "configurations": {
