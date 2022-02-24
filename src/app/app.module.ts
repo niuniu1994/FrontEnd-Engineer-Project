@@ -29,6 +29,8 @@ import { CommentairesComponent } from './view/components/commentaires/commentair
 import { PopupContainsComponent } from './view/components/popup-contains/popup-contains.component';
 import { GestionLivresComponent } from './view/components/Livres/gestion-livres/gestion-livres.component';
 import { LivresCardComponent } from './view/components/Livres/livres-card/livres-card.component';
+import { LivresDetailsComponent } from './view/components/Livres/livres-details/livres-details.component';
+import { LivresAddComponent } from './view/components/Livres/livres-add/livres-add.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { LivresCardComponent } from './view/components/Livres/livres-card/livres
     CommentairesComponent,
     PopupContainsComponent,
     GestionLivresComponent,
-    LivresCardComponent
+    LivresCardComponent,
+    LivresDetailsComponent,
+    LivresAddComponent
   ],
   imports: [
     BrowserModule,
