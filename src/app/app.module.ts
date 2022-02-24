@@ -31,7 +31,6 @@ import { HandleBookComponent } from './view/pages/manage-books/handle-book/handl
 import { HandleUsersComponent } from './view/pages/manage-user/handle-users/handle-users.component';
 import { UsersDetailsComponent } from './view/pages/users-details/users-details.component';
 import { DescriptionBooksComponent } from './view/pages/manage-books/description-books/description-books.component';
-import { TestComponent } from './view/users-pages/test/test.component';
 import { UserLibraryComponent } from './view/users-pages/user-library/user-library.component';
 import { UserDetailsLivresComponent } from './view/users-pages/user-details-livres/user-details-livres.component';
 import { UserLoanComponent } from './view/users-pages/user-loan/user-loan.component';
@@ -65,7 +64,6 @@ import { UserLoanComponent } from './view/users-pages/user-loan/user-loan.compon
     HandleUsersComponent,
     UsersDetailsComponent,
     DescriptionBooksComponent,
-    TestComponent,
     UserLibraryComponent,
     UserDetailsLivresComponent,
     UserLoanComponent
