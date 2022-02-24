@@ -25,6 +25,8 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BookComponentDetailsComponent } from './view/components/book-component-details/book-component-details.component';
+import { PdfReaderComponent } from './view/components/pdf-reader/pdf-reader.component';
+import { UserDashboardComponent } from './view/pages/user-dashboard/user-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { BookComponentDetailsComponent } from './view/components/book-component-
     BookCardComponent,
     StarsRateComponent,
     CardSliderComponent,
-    BookComponentDetailsComponent
+    BookComponentDetailsComponent,
+    PdfReaderComponent,
+    UserDashboardComponent
   ],
   imports: [
     BrowserModule,

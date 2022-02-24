@@ -1,13 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-
+import {Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'app-book-card',
   templateUrl: './book-card.component.html',
   styleUrls: ['./book-card.component.scss']
 })
 export class BookCardComponent implements OnInit {
+    @Input() book: IBookInfo = {
+      author: ["xxx"],
+      category: "Action",
+      date: "2018",
+      description: "not bad",
+      ebookUrl: "",
+      isbn: "",
+      note: 2.3,
+      thumbnail: "https://picsum.photos/id/944/900/500",
+      title: "book",
+      id:1};
 
-    images: { random: string; picture: string; }[] = []; 
+    images: { random: string; picture: string; }[] = [];
     responsiveOptions;
 
     constructor() {
