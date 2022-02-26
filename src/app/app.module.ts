@@ -25,6 +25,19 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BookComponentDetailsComponent } from './view/components/book-component-details/book-component-details.component';
+import { CommentairesComponent } from './view/components/commentaires/commentaires.component';
+import { PopupContainsComponent } from './view/components/popup-contains/popup-contains.component';
+import { GestionLivresComponent } from './view/components/Livres/gestion-livres/gestion-livres.component';
+import { LivresCardComponent } from './view/components/Livres/livres-card/livres-card.component';
+import { LivresDetailsComponent } from './view/components/Livres/livres-details/livres-details.component';
+import { LivresAddComponent } from './view/components/Livres/livres-add/livres-add.component';
+import { HandleUsersComponent } from './view/pages/manage-user/handle-users/handle-users.component';
+import { UsersDetailsComponent } from './view/pages/users-details/users-details.component';
+import { UserLibraryComponent } from './view/users-pages/user-library/user-library.component';
+import { UserDetailsLivresComponent } from './view/users-pages/user-details-livres/user-details-livres.component';
+import { MesLivresComponent } from './view/users-pages/mes-livres/mes-livres.component';
+import { MesLivresComponentComponent } from './view/components/Livres-users/mes-livres-component/mes-livres-component.component';
+import { MesLivresCardComponent } from './view/components/Livres-users/mes-livres-card/mes-livres-card.component';
 import { PdfReaderComponent } from './view/components/pdf-reader/pdf-reader.component';
 import { UserDashboardComponent } from './view/pages/user-dashboard/user-dashboard.component';
 
@@ -53,6 +66,21 @@ import { UserDashboardComponent } from './view/pages/user-dashboard/user-dashboa
     BookComponentDetailsComponent,
     PdfReaderComponent,
     UserDashboardComponent
+    BookComponentDetailsComponent,
+    CommentairesComponent,
+    PopupContainsComponent,
+    GestionLivresComponent,
+    LivresCardComponent,
+    LivresDetailsComponent,
+    LivresAddComponent,
+    HandleUsersComponent,
+    UsersDetailsComponent,
+    UserLibraryComponent,
+    UserDetailsLivresComponent,
+    MesLivresComponent,
+    MesLivresComponentComponent,
+    MesLivresCardComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
