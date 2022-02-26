@@ -1,8 +1,11 @@
 <section class="container">
   <div class="bar-design shadow table-radius">
-    <button type="button" class="btn btn-sm btn-style table-radius shadow">Nouvel Utilisateur</button>
+    <button type="button" class="btn btn-sm btn-style table-radius shadow" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Nouvel Utilisateur</button>
   </div>
-  
+  <!-- Modal -->
+  <div class="modal fade " id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <app-popup-contains></app-popup-contains>
+  </div>
   <div class="shadow tab-design table-radius">
     <div>
       <table class="table">
@@ -24,6 +27,7 @@
             <td>Mark</td>
             <td><button type="button" class="btn btn-primary btn-sm table-radius btn-table-style">Details</button></td>
             
+            
           </tr>
         </tbody>
       </table>
@@ -43,4 +47,5 @@
     </ul>
   </nav>
 </section>
+
 

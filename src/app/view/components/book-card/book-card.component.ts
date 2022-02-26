@@ -1,7 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IBookInfo} from "../../../models/IBookInfo";
-import {Router} from "@angular/router";
-import {AuthService} from "../../../service/auth/auth.service";
 @Component({
   selector: 'app-book-card',
   templateUrl: './book-card.component.html',
@@ -13,7 +11,6 @@ export class BookCardComponent implements OnInit {
       category: "",
       description: "",
       ebookUrl: "",
-      id: 0,
       isbn: "",
       publishDate: "",
       rate: 0,
