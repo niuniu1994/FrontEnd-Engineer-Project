@@ -11,6 +11,13 @@
         },
         "@schematics/angular:application": {
           "strict": true
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "move-safe:build",
+            "proxyConfig": "src/proxy.conf.json"
+          }
         }
       },
       "root": "",

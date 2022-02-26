@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {FormBuilder, FormGroup} from '@angular/forms';
+
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -8,24 +9,31 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class LoginPageComponent implements OnInit {
   loginForm!: FormGroup;
-  url= "http://localhost:8080/login";
-  //encodedData = "Basic " + btoa(username:password)
+  url = "http://localhost:8080/home";
 
-  
-
-  constructor(private fb: FormBuilder, private _httpClient: HttpClient) { }
+  constructor(private fb: FormBuilder, private _httpClient: HttpClient) {
+  }
 
   ngOnInit() {
-    // this._httpClient.post(this.url,"Authorization", encodedData);
-
     this.loginForm = this.fb.group({
       username: [],
       password: [],
     })
+
+
   }
 
-  submitForm(){
-    console.log(this.loginForm.get('password')?.value);
+  submitForm() {
+    let usernamePassword = this.loginForm.get('username')?.value+':'+this.loginForm.get('password')?.value
+
+    var header = {
+      headers: new HttpHeaders()
+        .set('Authorization',  `Basic ${btoa(usernamePassword)}`)
+    }
+
+    console.log("hello")
+    this._httpClient.get(this.url, header).subscribe(response => console.log(response))
+
   }
 
 }
