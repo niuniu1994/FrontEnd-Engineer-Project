@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { LoginPageComponent } from './view/components/login-page/login-page.component';
-import { SignInPageComponent } from './view/pages/sign-in-page/sign-in-page.component';
+// // import { LoginPageComponent } from './view/components/login-page/login-page.component';
+// import { SignInPageComponent } from './view/pages/sign-in-page/sign-in-page.component';
 import { FooterComponent } from './view/components/footer/footer.component';
 import { NavBarComponent } from './view/components/nav-bar/nav-bar.component';
 // import { HomePageComponent } from './view/pages/home-page/home-page.component';
@@ -37,7 +37,6 @@ import { MesLivresCardComponent } from './view/components/Livres-users/mes-livre
 @NgModule({
   declarations: [
     AppComponent,
-    SignInPageComponent,
     FooterComponent,
     NavBarComponent,
     CardComponent,

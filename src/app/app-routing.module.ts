@@ -5,6 +5,7 @@ import { HomePageComponent } from './view/pages/home-page/home-page.component';
 import { DescriptionBooksComponent } from './view/pages/manage-books/description-books/description-books.component';
 import { HandleBookComponent } from './view/pages/manage-books/handle-book/handle-book.component';
 import { LibraryComponent } from './view/pages/manage-books/library/library.component';
+import { SignInPageComponent } from './view/pages/sign-in-page/sign-in-page.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginPageComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'gerer-ma-bibliotheque', component: HandleBookComponent},
   {path: 'description-livre', component: DescriptionBooksComponent},
   {path: 'ma-bibliotheque', component: LibraryComponent},
+  {path: 'inscription', component: SignInPageComponent}
 
 
 ];
@@ -21,4 +23,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [LoginPageComponent, HomePageComponent, HandleBookComponent, DescriptionBooksComponent, LibraryComponent]
+export const routingComponents = [LoginPageComponent, HomePageComponent, HandleBookComponent, DescriptionBooksComponent, LibraryComponent, SignInPageComponent]
