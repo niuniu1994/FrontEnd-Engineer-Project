@@ -27,6 +27,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BookComponentDetailsComponent } from './view/components/book-component-details/book-component-details.component';
 import { PdfReaderComponent } from './view/components/pdf-reader/pdf-reader.component';
 import { UserDashboardComponent } from './view/pages/user-dashboard/user-dashboard.component';
+import {JwtModule} from "@auth0/angular-jwt";
+import { BookDetailComponent } from './view/pages/book-detail/book-detail.component';
+
+export function tokenGetter() {
+  return localStorage.getItem("token");
+}
 
 @NgModule({
   declarations: [
@@ -52,14 +58,20 @@ import { UserDashboardComponent } from './view/pages/user-dashboard/user-dashboa
     CardSliderComponent,
     BookComponentDetailsComponent,
     PdfReaderComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    BookDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     IvyCarouselModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

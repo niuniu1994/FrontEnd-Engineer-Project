@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import {AuthService} from "../../../service/auth/auth.service";
+import {IUser} from "../../../models/IUser";
+import {Router} from "@angular/router";
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -11,9 +13,9 @@ export class LoginPageComponent implements OnInit {
   url= "http://localhost:8080/login";
   //encodedData = "Basic " + btoa(username:password)
 
-  
 
-  constructor(private fb: FormBuilder, private _httpClient: HttpClient) { }
+
+  constructor(private fb: FormBuilder, private authService:AuthService, private router:Router) { }
 
   ngOnInit() {
     // this._httpClient.post(this.url,"Authorization", encodedData);
@@ -25,7 +27,18 @@ export class LoginPageComponent implements OnInit {
   }
 
   submitForm(){
-    console.log(this.loginForm.get('password')?.value);
+    const formData = new FormData();
+    formData.set("email",this.loginForm.get('username')?.value)
+    formData.set("password",this.loginForm.get('password')?.value)
+    const user:IUser = {email:this.loginForm.get('username')?.value,password:this.loginForm.get('password')?.value}
+    this.authService.login(formData).subscribe(response => {
+      if (response.status == 200){
+        localStorage.setItem("token",response.data);
+        this.router.navigateByUrl("")
+      }else {
+        window.alert("Username or password incorrect")
+      }
+    })
   }
 
 }

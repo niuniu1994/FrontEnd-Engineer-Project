@@ -1,26 +1,30 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {IBookInfo} from "../../../models/IBookInfo";
+import {Router} from "@angular/router";
+import {AuthService} from "../../../service/auth/auth.service";
 @Component({
   selector: 'app-book-card',
   templateUrl: './book-card.component.html',
   styleUrls: ['./book-card.component.scss']
 })
 export class BookCardComponent implements OnInit {
-    @Input() book: IBookInfo = {
-      author: ["xxx"],
-      category: "Action",
-      date: "2018",
-      description: "not bad",
+    @Input() book: IBookInfo= {
+      author: "",
+      category: "",
+      description: "",
       ebookUrl: "",
+      id: 0,
       isbn: "",
-      note: 2.3,
-      thumbnail: "https://picsum.photos/id/944/900/500",
-      title: "book",
-      id:1};
+      publishDate: "",
+      rate: 0,
+      thumbnail: "",
+      title: ""
 
-    images: { random: string; picture: string; }[] = [];
+    };
+
     responsiveOptions;
 
-    constructor() {
+    constructor(private router:Router,private authService:AuthService) {
         this.responsiveOptions = [{
             breakpoint: '1024px',
             numVisible: 1,
@@ -29,14 +33,16 @@ export class BookCardComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.images = [
-            {random: 'Random', picture: 'https://picsum.photos/id/944/900/500'},
-            {random: 'Samoa', picture: 'https://picsum.photos/id/1011/900/500'},
-            {random: 'Tonga', picture: 'https://picsum.photos/id/984/900/500'},
-            {random: 'Cook Island', picture: 'https://picsum.photos/id/944/900/500'},
-            {random: 'Niue', picture: 'https://picsum.photos/id/1011/900/500'},
-            {random: 'American Samoa', picture: 'https://picsum.photos/id/984/900/500'}
-        ];
+
     }
 
+  borrow() {
+    if (this.authService.isAuthenticated()){
+      this.router.navigate(["ebook",this.book.ebookUrl])
+    }
+  }
+
+  detail() {
+    this.router.navigate(["book","detail",this.book.id])
+  }
 }

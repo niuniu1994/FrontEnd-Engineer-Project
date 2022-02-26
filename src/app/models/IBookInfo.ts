@@ -1,12 +1,19 @@
+import {comment} from "./Comment";
+
 export interface IBookInfo{
   id:number,
   isbn:string,
   title:string,
+  author:string,
   category:string,
-  date:string,
-  note:number,
+  publishDate:string,
+  rate:number,
   description:string,
-  author:[string],
   thumbnail:string,
   ebookUrl: string
+}
+
+
+export interface IBookInfoWithComments extends IBookInfo{
+  comments:comment[];
 }

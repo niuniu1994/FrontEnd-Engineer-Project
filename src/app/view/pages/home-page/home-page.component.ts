@@ -14,7 +14,7 @@ type CategoryDto = {
 })
 
 export class HomePageComponent implements OnInit {
-  public categories = ["Classic","Fantasy","Romance","Crime"];
+  public categories = ["Classic","Fiction","Historical novel","Romance","Children's literature"];
   public categoryDtoList: CategoryDto[] = [];
   constructor(private bookService: BookService) { }
 
