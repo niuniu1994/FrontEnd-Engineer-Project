@@ -1,7 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {FormBuilder, FormGroup} from '@angular/forms';
-
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -9,31 +8,40 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class LoginPageComponent implements OnInit {
   loginForm!: FormGroup;
-  url = "http://localhost:8080/home";
+  url= "http://localhost:8080/login";
+  //encodedData = "Basic " + btoa(username:password)
+  isFormSubmitted = false;
 
-  constructor(private fb: FormBuilder, private _httpClient: HttpClient) {
-  }
+  
+
+  constructor(private fb: FormBuilder, private _httpClient: HttpClient) { }
 
   ngOnInit() {
+    // this._httpClient.post(this.url,"Authorization", encodedData);
+
     this.loginForm = this.fb.group({
-      username: [],
-      password: [],
-    })
+      username: ['', [Validators.required, Validators.minLength(4)]],
+      password: ['', [Validators.required, Validators.minLength(4)]],
+    });
 
-
+    // this.loginForm = new FormGroup({
+    //   'username' : new FormControl(null, Validators.required),
+    //   'password' : new FormControl(null, Validators.required)
+    // })
   }
 
-  submitForm() {
-    let usernamePassword = this.loginForm.get('username')?.value+':'+this.loginForm.get('password')?.value
 
-    var header = {
-      headers: new HttpHeaders()
-        .set('Authorization',  `Basic ${btoa(usernamePassword)}`)
-    }
 
-    console.log("hello")
-    this._httpClient.get(this.url, header).subscribe(response => console.log(response))
+  submitForm(){
 
+          // Set flag to true
+          this.isFormSubmitted = true;
+
+          if (this.loginForm.invalid) {
+            return;
+          }
+          console.log('Submit', this.loginForm.value);
+        
   }
 
 }

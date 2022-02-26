@@ -13,26 +13,43 @@
 
                     <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
                         <!-- email input -->
-                        <div class="input-group flex-nowrap mb-4">
+                        <div class="input-group flex-nowrap">
                             <span class="input-group-text input_form"> </span>
-                            <input type="text" class="shadow form-control" formControlName="username" placeholder="username" aria-label="username" aria-describedby="addon-wrapping">
+                            <input type="text" class="shadow form-control" formControlName="username" placeholder="username" aria-label="username" aria-describedby="addon-wrapping" 
+                            [ngClass]="{ 'is-invalid': (isFormSubmitted && loginForm.get('username')?.errors) || (!loginForm.get('username')?.pristine && loginForm.get('username')?.invalid)}">
+                            <!-- <span  class="text-danger" *ngIf="loginForm.get('username')?.valid && loginForm.get('username')?.touched">email-required</span> -->
+                        </div>
+                        
+                        <div style="margin-top: -0em; margin-left: -1.3em;" class="invalid-feedback form-check d-flex justify-content-start mb-3" 
+                            *ngIf="(isFormSubmitted && loginForm.get('username')?.errors) || (!loginForm.get('username')?.pristine && loginForm.get('username')?.invalid)">
+                            <div *ngIf="isFormSubmitted && loginForm.get('username')?.errors?.['required']" style="display:inline-block; text-align:left;width:150px;">username is required</div>
+                            <div *ngIf="isFormSubmitted && loginForm.get('username')?.errors?.['minLength']" style="display:inline-block; text-align:left;width:150px;">check the minimun Length</div>
                         </div>
                         
                         <!-- password input -->
-                        <div class="input-group flex-nowrap mb-4">
+                        <div class="input-group flex-nowrap mt-4">
                             <span class="input-group-text input_form" id="addon-wrapping"> </span>
-                            <input type="password" class="shadow form-control" formControlName="password" placeholder="password" aria-label="password" aria-describedby="addon-wrapping">
+                            <input type="password" class="shadow form-control" formControlName="password" placeholder="password" aria-label="password" aria-describedby="addon-wrapping"
+                            [ngClass]="{ 'is-invalid': (isFormSubmitted && loginForm.get('password')?.errors) }">
                         </div>
+                        
+                        <div style="margin-top: -0em; margin-left: -1.3em;" class="invalid-feedback form-check d-flex justify-content-start mb-3"
+                            *ngIf="isFormSubmitted && loginForm.get('username')?.errors">
+                            <label style="display:inline-block; text-align:left;width:150px;">Password is required</label>
+                        </div>
+                       
+                        
+                        
 
                         <!-- Checkbox -->
-                        <div class="form-check d-flex justify-content-start mb-2 mb-4">
+                        <div class="form-check d-flex justify-content-start mt-4 mb-4">
                             <input class="shadow form-check-input rememberbox_form" type="checkbox" value="" id=""/>
                             <label class="form-check-label" for=""> Remember Me </label>
                         </div>
 
                         <!-- login button -->
                         <div class="d-grid gap-2">
-                            <button class="shadow btn btn-style" type="submit">Login</button>
+                            <button  class="shadow btn btn-style" type="submit">Login</button>
                         </div>
                     </form>
 

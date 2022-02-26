@@ -5,14 +5,20 @@ import { HomePageComponent } from './view/pages/home-page/home-page.component';
 import { DescriptionBooksComponent } from './view/pages/manage-books/description-books/description-books.component';
 import { HandleBookComponent } from './view/pages/manage-books/handle-book/handle-book.component';
 import { LibraryComponent } from './view/pages/manage-books/library/library.component';
+import { HandleUsersComponent } from './view/pages/manage-user/handle-users/handle-users.component';
 import { SignInPageComponent } from './view/pages/sign-in-page/sign-in-page.component';
+import { UsersDetailsComponent } from './view/pages/users-details/users-details.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginPageComponent},
-  {path: 'accueil', component: HomePageComponent},
-  {path: 'gerer-ma-bibliotheque', component: HandleBookComponent},
-  {path: 'description-livre', component: DescriptionBooksComponent},
-  {path: 'ma-bibliotheque', component: LibraryComponent},
+  {path: 'home', component: HomePageComponent},
+  {path: 'manage-library', component: HandleBookComponent},
+  {path: 'book-description', component: DescriptionBooksComponent},
+  {path: 'my-library', component: LibraryComponent},
+  {path: 'my-users', component: HandleUsersComponent},
+  {path: 'sign-up', component: SignInPageComponent},
+  {path: 'manage-users', component: UsersDetailsComponent},
+  {path: 'inscription', component: SignInPageComponent},
   {path: 'inscription', component: SignInPageComponent}
 
 
@@ -23,4 +29,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [LoginPageComponent, HomePageComponent, HandleBookComponent, DescriptionBooksComponent, LibraryComponent, SignInPageComponent]
+export const routingComponents = [LoginPageComponent, HomePageComponent, HandleBookComponent, DescriptionBooksComponent, LibraryComponent, SignInPageComponent, HandleUsersComponent, UsersDetailsComponent]
