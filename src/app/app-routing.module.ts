@@ -10,6 +10,7 @@ import { SignInPageComponent } from './view/pages/sign-in-page/sign-in-page.comp
 import { UsersDetailsComponent } from './view/pages/users-details/users-details.component';
 
 const routes: Routes = [
+  {path: '', component: HomePageComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'home', component: HomePageComponent},
   {path: 'manage-library', component: HandleBookComponent},
@@ -19,12 +20,9 @@ const routes: Routes = [
   {path: 'sign-up', component: SignInPageComponent},
   {path: 'manage-users', component: UsersDetailsComponent},
   {path: 'inscription', component: SignInPageComponent},
-  {path: 'inscription', component: SignInPageComponent}
+  ]
 
 
-const routes:Routes = [
-  {path: '', component: HomePageComponent},
-]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

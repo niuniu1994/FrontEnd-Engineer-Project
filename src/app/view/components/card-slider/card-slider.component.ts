@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {IBookInfo} from "../../../models/IBookInfo";
 
 @Component({
   selector: 'app-card-slider',
