@@ -1,41 +1,12 @@
 <section>
     <div class="card ms-3 me-1 mt-2 border-0 shadow">
-        <div class="card-body card-style shadow-sm border-0">
-            <div class="">
-                History
-            </div>
+        <div class="card-body card-style shadow-sm">
+          {{bookCategory}}
         </div>
     </div>
     <carousel [height]="700" [cellWidth]="330" adaptiveHeight>
-        <div class="carousel-cell">
-            <app-book-card></app-book-card>
-        </div>
-        <div class="carousel-cell">
-            <app-book-card></app-book-card>
-        </div>
-        <div class="carousel-cell">
-            <app-book-card></app-book-card>
-        </div>
-        <div class="carousel-cell">
-            <app-book-card></app-book-card>
-        </div>
-        <div class="carousel-cell">
-            <app-book-card></app-book-card>
-        </div>
-        <div class="carousel-cell">
-            <app-book-card></app-book-card>
-        </div>
-        <div class="carousel-cell">
-            <app-book-card></app-book-card>
-        </div>
-        <div class="carousel-cell">
-            <app-book-card></app-book-card>
-        </div>
-        <div class="carousel-cell">
-            <app-book-card></app-book-card>
-        </div>
-        <div class="carousel-cell">
-            <app-book-card></app-book-card>
+        <div class="carousel-cell"  *ngFor="let book of bookList" >
+            <app-book-card [book]="book"></app-book-card>
         </div>
     </carousel>
 </section>

@@ -1,20 +1,21 @@
 <section class="card-position row">
     <div class="card border-0 shadow box-design" style="width: 18rem;">
-        <img src="https://pdf.1001ebooks.com/wp-content/uploads/2020/05/Andre%CC%81-Brink-Une-Saison-Blanche-Et-Seche-.jpg" class="img-style w-1" alt="...">
+        <img src="{{book.thumbnail}}" class="img-style w-1" alt="...">
         <div class="card-body">
-          <h4 class="card-title">Une Saison Blanche et Sèche</h4>
+          <h4 class="card-title">{{book.title}}</h4>
           <div class="row">
              <div class="col-6">
-                <h5 class="card-title text-muted">Tragedie</h5>
-                <h6 class="card-subtitle mb-2">2019</h6>
+                <h5 class="card-title text-muted">{{book.category}}</h5>
+                <h6 class="card-subtitle mb-2">{{book.publishDate}}</h6>
              </div>
              <div class="col-6">
                 <div style="float: right;" class="rate-style shadow">
-                    <p><b>2.6</b></p>
+                    <p><b>{{book.rate}}</b></p>
                 </div>
-             </div> 
+             </div>
           </div>
-          <a href="#" style="float: right;" class="btn btn-outline-primary">Voir</a>
+          <a style="float: right;" class="btn btn-outline-primary" (click)="detail()">Detail</a>
+          <a style="float: right;" class="btn btn-outline-primary" (click)="borrow()">Borrow</a>
         </div>
     </div>
 </section>

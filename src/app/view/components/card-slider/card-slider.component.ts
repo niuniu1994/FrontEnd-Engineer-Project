@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {IBookInfo} from "../../../models/IBookInfo";
 
 @Component({
   selector: 'app-card-slider',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-slider.component.scss']
 })
 export class CardSliderComponent implements OnInit {
+  @Input() bookCategory: string = "Default";
+  @Input() bookList: IBookInfo[] | undefined;
 
   constructor() { }
 

@@ -1,0 +1,24 @@
+{
+  "/ebooks": {
+    "target": "https://my-demo-bucket-123432134.s3.eu-central-1.amazonaws.com/books",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/ebooks": ""
+    },
+    "logLevel": "debug"
+  },
+
+  "/wp-content": {
+    "target": "https://www.planetebook.com/wp-content",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/api": {
+    "target": "http://localhost:8080/",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

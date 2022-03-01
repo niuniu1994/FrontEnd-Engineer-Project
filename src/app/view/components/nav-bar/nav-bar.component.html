@@ -27,7 +27,10 @@
             <a class="nav-link text-muted" href="#">ACCUEIL</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-muted" href="#">SUPPORT-ELIB</a>
+                <a class="nav-link text-muted" href="#">BOOKS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-muted" href="#">USERS</a>
             </li>
         </ul>
         <!-- Left links -->
@@ -43,15 +46,16 @@
 
         <!-- Avatar -->
         <div class="btn-group">
-            <button type="button" class="btn shadow btn-group-design btn-Light dropdown-toggle btn-lg" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="assets/user1.png" width="27rem"> FOGUE TSAKOU DANIEL GUIROL
-            </button>
+       <button (click)="login()" type="button" class="btn shadow btn-group-design btn-Light dropdown-toggle btn-lg" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/user1.png" width="27rem"> {{username}}
+          </button>
+
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
                 <li><a class="dropdown-item active" href="#">PROFIL</a></li>
                 <li><a class="dropdown-item" href="#">DECONNEXION</a></li>
             </ul>
-        </div>  
-            
+        </div>
+
         </div>
     </div>
 </nav>
