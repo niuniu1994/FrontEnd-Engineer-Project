@@ -1,6 +1,6 @@
 {
   "/ebooks": {
-    "target": "https://www.planetebook.com/free-ebooks",
+    "target": "https://my-demo-bucket-123432134.s3.eu-central-1.amazonaws.com/books",
     "secure": true,
     "changeOrigin": true,
     "pathRewrite": {
@@ -8,6 +8,7 @@
     },
     "logLevel": "debug"
   },
+
   "/wp-content": {
     "target": "https://www.planetebook.com/wp-content",
     "secure": true,

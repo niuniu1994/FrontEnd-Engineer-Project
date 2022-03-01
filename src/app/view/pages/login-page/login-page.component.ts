@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import {AuthService} from "../../../service/auth/auth.service";
+import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import {IUser} from "../../../models/IUser";
+import {AuthService} from "../../../service/auth/auth.service";
 import {Router} from "@angular/router";
 @Component({
   selector: 'app-login-page',
@@ -10,8 +11,7 @@ import {Router} from "@angular/router";
 })
 export class LoginPageComponent implements OnInit {
   loginForm!: FormGroup;
-  url= "http://localhost:8080/login";
-  //encodedData = "Basic " + btoa(username:password)
+  isFormSubmitted = false;
 
 
 
@@ -21,10 +21,17 @@ export class LoginPageComponent implements OnInit {
     // this._httpClient.post(this.url,"Authorization", encodedData);
 
     this.loginForm = this.fb.group({
-      username: [],
-      password: [],
-    })
+      username: ['', [Validators.required, Validators.minLength(4)]],
+      password: ['', [Validators.required, Validators.minLength(4)]],
+    });
+
+    // this.loginForm = new FormGroup({
+    //   'username' : new FormControl(null, Validators.required),
+    //   'password' : new FormControl(null, Validators.required)
+    // })
   }
+
+
 
   submitForm(){
     const formData = new FormData();

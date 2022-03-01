@@ -9,11 +9,10 @@ import {JwtHelperService} from "@auth0/angular-jwt";
 })
 export class NavBarComponent implements OnInit {
   opened = false;
-  public token:any = "Login";
-  constructor(private router:Router,private authService:AuthService,private jwtHelper:JwtHelperService) {
-      const token = this.authService.getToken();
-      if (token != null){
-        this.token = this.jwtHelper.decodeToken(token).username
+  public username:any = "Login";
+  constructor(private router:Router,private authService:AuthService) {
+      if (this.authService.isAuthenticated()){
+        this.username = this.authService.getUsername();
       }
   }
 

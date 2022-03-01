@@ -5,8 +5,8 @@
                 <div class="card-body">
                     <div class="text-center">
                         <img src="assets/user1.png" class="w-50 rounded-circle border " alt="">
-                        <h3 class="mt-4 card-title">Daniel Guirol FOGUE</h3>
-                        <p class="text-muted card-text">daniel.fogue.tsakou@efrei.net</p>
+                        <h3 class="mt-4 card-title">{{user.firstName}} {{user.lastName}}</h3>
+                        <p class="text-muted card-text">{{user.email}}</p>
                     </div>
                 </div>
             </div>
@@ -19,36 +19,35 @@
                         <div class="col">
                           <div>
                             <p class="text-muted txt-style row-bottom-margin font-weight-bold">Nom</p>
-                            <p class="card-text">Female</p>
+                            <p class="card-text">{{user.firstName}}</p>
                             <hr>
                           </div>
                         </div>
                         <div class="col">
                             <p class="text-muted txt-style row-bottom-margin">Prenom</p>
-                            <p class="card-text">Female</p>
+                            <p class="card-text">{{user.lastName}}</p>
                             <hr>
                         </div>
                         <div class="col">
                             <p class="text-muted txt-style row-bottom-margin">Email</p>
-                            <p class="card-text">Female</p>
+                            <p class="card-text">{{user.email}}</p>
                             <hr>
                         </div>
                         <div class="col">
-                            <p class="text-muted txt-style row-bottom-margin">Telephone</p>
-                            <p class="card-text">Female</p>
+                            <p class="text-muted txt-style row-bottom-margin">Country</p>
+                            <p class="card-text">{{user.address.country}}</p>
                             <hr>
                         </div>
                         <div class="col">
-                            <p class="text-muted txt-style row-bottom-margin">Lieu de Naissance</p>
-                            <p class="card-text">Female</p>
+                            <p class="text-muted txt-style row-bottom-margin">Zip</p>
+                            <p class="card-text">{{user.address.zipCode}}</p>
                             <hr>
                         </div>
                         <div class="col">
                             <p class="text-muted txt-style row-bottom-margin">Sujet Favoris</p>
-                            <span class="badge bg-info text-dark">Geographie</span>
-                            <span class="badge bg-info text-dark ms-2">Comedie</span>
-                            <span class="badge bg-info text-dark ms-2">Science Fiction</span>
-                            <span class="badge bg-info text-dark">Food</span>
+                          <ng-container  *ngFor="let c of categories">
+                            <span class="badge bg-info text-dark">{{c}}</span>
+                          </ng-container>
                             <hr>
                         </div>
                       </div>
@@ -57,59 +56,27 @@
         </div>
     </div>
     <div class="card card-style-bottom radius  ms-3 me-3 mt-3 shadow border-0">
-        <h5 class="card-header radius title-design">Mes Favoris</h5>
+        <h5 class="card-header radius title-design">Mes livres</h5>
+
         <div class="h-75 border-0 overflow-auto scroll-style">
-            <div>
-                <div class="card-fav-style card mt-3 ms-2 me-2 shadow">
-                    <div class="">
-                        <div class="float-start">
-                            <span><img src="https://pdf.1001ebooks.com/wp-content/uploads/2020/05/Andre%CC%81-Brink-Une-Saison-Blanche-Et-Seche-.jpg" class="shadow mt-2 ms-2 mb-2 img-style"></span>
-                        </div>
-                        <div class="float-right ms-2 mt-2">
-                            <h3>Une Saison blanche et sèche</h3>
-                            <h6>André BRINK</h6>
-                            <h6>2018</h6>
-                        </div>
-                        <div class="ms-2 mt-2">
-                            <button type="button" class="btn btn-outline-danger btn-sm float-end me-3 mb-4">Retirer</button>
-                        </div>
-                    </div>
-                </div> 
+          <div *ngFor="let book of user.books">
+            <div class="card-fav-style card mt-3 ms-2 me-2 shadow">
+              <div class="">
+                <div class="float-start">
+                  <span><img src="{{book.thumbnail}}" class="shadow mt-2 ms-2 mb-2 img-style"></span>
+                </div>
+                <div class="float-right ms-2 mt-2">
+                  <h3>{{book.title}}</h3>
+                  <h6>{{book.author}}</h6>
+                  <h6>{{book.publishDate}}</h6>
+                </div>
+                <div class="ms-2 mt-2">
+                  <button type="button" class="btn btn-sm float-end me-3 mb-4" (click)="read(book.ebookUrl)">Lire</button>
+                  <button type="button" class="btn btn-outline-danger btn-sm float-end me-3 mb-4" (click)="return(book.id)">Rendre</button>
+                </div>
+              </div>
             </div>
-            <div>
-                <div class="card-fav-style card mt-3 ms-2 me-2 shadow">
-                    <div class="">
-                        <div class="float-start">
-                            <span><img src="https://pdf.1001ebooks.com/wp-content/uploads/2020/05/Andre%CC%81-Brink-Une-Saison-Blanche-Et-Seche-.jpg" class="shadow mt-2 ms-2 mb-2 img-style"></span>
-                        </div>
-                        <div class="float-right ms-2 mt-2">
-                            <h3>Une Saison blanche et sèche</h3>
-                            <h6>André BRINK</h6>
-                            <h6>2018</h6>
-                        </div>
-                        <div class="ms-2 mt-2">
-                            <button type="button" class="btn btn-outline-danger btn-sm float-end me-3 mb-4">Retirer</button>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-            <div>
-                <div class="card-fav-style card mt-3 ms-2 me-2 shadow">
-                    <div class="">
-                        <div class="float-start">
-                            <span><img src="https://pdf.1001ebooks.com/wp-content/uploads/2020/05/Andre%CC%81-Brink-Une-Saison-Blanche-Et-Seche-.jpg" class="shadow mt-2 ms-2 mb-2 img-style"></span>
-                        </div>
-                        <div class="float-right ms-2 mt-2">
-                            <h3>Une Saison blanche et sèche</h3>
-                            <h6>André BRINK</h6>
-                            <h6>2018</h6>
-                        </div>
-                        <div class="ms-2 mt-2">
-                            <button type="button" class="btn btn-outline-danger btn-sm float-end me-3 mb-4">Retirer</button>
-                        </div>
-                    </div>
-                </div> 
-            </div>
+          </div>
         </div>
     </div>
 </section>

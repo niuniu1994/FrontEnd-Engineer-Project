@@ -2,8 +2,7 @@
     <div class="card mt-2 ms-2 me-2 h-auto">
         <div class="card-body">
             <div class="row">
-                <div class="col-md-3">
-                    <img src="https://pdf.1001ebooks.com/wp-content/uploads/2020/05/Andre%CC%81-Brink-Une-Saison-Blanche-Et-Seche-.jpg" class="border border-4 ms-4 shadow img-style" alt="">
+
                 <div class="col-sm-3">
                     <img src="{{book.thumbnail}}" class="border border-4 ms-4 shadow img-style" alt="">
                     <div class="ms-4 mb-4">
@@ -30,13 +29,12 @@
                             <p class="text-muted txt-style row-bottom-margin">ISBN CODE</p>
                             <h5 class="">{{book.isbn}}</h5>
                             <p class="text-muted txt-style row-bottom-margin mt-4">SUJET</p>
-                            <h6><span class="badge bg-info text-dark">Geographie</span></h6>
+                            <h6><span class="badge bg-info text-dark">{{book.category}}</span></h6>
                         </div>
 
                     </div>
                     <div class="float-end mt-5 me-3">
-                        <button type="button" class="btn btn-outline-primary btn-sm ">Lire</button>
-                        <button type="button" class="btn btn-outline-danger btn-sm ms-2">supprimer</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm ">Borrow</button>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginPageComponent } from './view/pages/login-page/login-page.component';
+import {LoginPageComponent} from "./view/pages/login-page/login-page.component";
 import { SignInPageComponent } from './view/pages/sign-in-page/sign-in-page.component';
 import { FooterComponent } from './view/components/footer/footer.component';
 import { NavBarComponent } from './view/components/nav-bar/nav-bar.component';
@@ -10,11 +10,6 @@ import { HomePageComponent } from './view/pages/home-page/home-page.component';
 import { CardComponent } from './view/components/card/card.component';
 import { ChevronsComponent } from './view/components/icons/chevrons/chevrons.component';
 import { UserCardComponent } from './view/components/user-card/user-card.component';
-import { ListUserComponent } from './view/pages/manage-user/list-user/list-user.component';
-import { DetailsUserComponent } from './view/pages/manage-user/details-user/details-user.component';
-import { LibraryComponent } from './view/pages/manage-books/library/library.component';
-import { FamousBooksComponent } from './view/pages/manage-books/famous-books/famous-books.component';
-import { DetailsBooksComponent } from './view/pages/manage-books/details-books/details-books.component';
 import { TablesComponent } from './view/components/tables/tables.component';
 import { FiltersComponent } from './view/components/filters/filters.component';
 import { SearchBarComponent } from './view/components/search-bar/search-bar.component';
@@ -25,7 +20,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BookComponentDetailsComponent } from './view/components/book-component-details/book-component-details.component';
-import { CommentairesComponent } from './view/components/commentaires/commentaires.component';
+import { CommentariesComponent } from './view/components/commentaires/commentaries.component';
 import { PopupContainsComponent } from './view/components/popup-contains/popup-contains.component';
 import { GestionLivresComponent } from './view/components/Livres/gestion-livres/gestion-livres.component';
 import { LivresCardComponent } from './view/components/Livres/livres-card/livres-card.component';
@@ -33,7 +28,6 @@ import { LivresDetailsComponent } from './view/components/Livres/livres-details/
 import { LivresAddComponent } from './view/components/Livres/livres-add/livres-add.component';
 import { HandleUsersComponent } from './view/pages/manage-user/handle-users/handle-users.component';
 import { UsersDetailsComponent } from './view/pages/users-details/users-details.component';
-import { UserLibraryComponent } from './view/users-pages/user-library/user-library.component';
 import { UserDetailsLivresComponent } from './view/users-pages/user-details-livres/user-details-livres.component';
 import { MesLivresComponent } from './view/users-pages/mes-livres/mes-livres.component';
 import { MesLivresComponentComponent } from './view/components/Livres-users/mes-livres-component/mes-livres-component.component';
@@ -42,6 +36,7 @@ import { PdfReaderComponent } from './view/components/pdf-reader/pdf-reader.comp
 import { UserDashboardComponent } from './view/pages/user-dashboard/user-dashboard.component';
 import {JwtModule} from "@auth0/angular-jwt";
 import { BookDetailComponent } from './view/pages/book-detail/book-detail.component';
+import {HandleBookComponent} from "./view/pages/manage-books/handle-book/handle-book.component";
 
 export function tokenGetter() {
   return localStorage.getItem("token");
@@ -50,7 +45,6 @@ export function tokenGetter() {
 @NgModule({
   declarations: [
     HandleBookComponent,
-    DescriptionBooksComponent,
     AppComponent,
     LoginPageComponent,
     SignInPageComponent,
@@ -60,11 +54,6 @@ export function tokenGetter() {
     CardComponent,
     ChevronsComponent,
     UserCardComponent,
-    ListUserComponent,
-    DetailsUserComponent,
-    LibraryComponent,
-    FamousBooksComponent,
-    DetailsBooksComponent,
     TablesComponent,
     FiltersComponent,
     SearchBarComponent,
@@ -75,7 +64,7 @@ export function tokenGetter() {
     PdfReaderComponent,
     UserDashboardComponent,
     BookComponentDetailsComponent,
-    CommentairesComponent,
+    CommentariesComponent,
     PopupContainsComponent,
     GestionLivresComponent,
     LivresCardComponent,
@@ -83,7 +72,6 @@ export function tokenGetter() {
     LivresAddComponent,
     HandleUsersComponent,
     UsersDetailsComponent,
-    UserLibraryComponent,
     UserDetailsLivresComponent,
     MesLivresComponent,
     MesLivresComponentComponent,

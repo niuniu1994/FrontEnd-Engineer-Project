@@ -1,4 +1,4 @@
-import {comment} from "./Comment";
+import {IComment} from "./IComment";
 
 export interface IBookInfo{
   id:number,
@@ -15,5 +15,5 @@ export interface IBookInfo{
 
 
 export interface IBookInfoWithComments extends IBookInfo{
-  comments:comment[];
+  comments:IComment[];
 }
