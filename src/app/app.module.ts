@@ -36,7 +36,10 @@ import { PdfReaderComponent } from './view/components/pdf-reader/pdf-reader.comp
 import { UserDashboardComponent } from './view/pages/user-dashboard/user-dashboard.component';
 import {JwtModule} from "@auth0/angular-jwt";
 import { BookDetailComponent } from './view/pages/book-detail/book-detail.component';
-import {HandleBookComponent} from "./view/pages/manage-books/handle-book/handle-book.component";
+import {AdminPageComponent} from "./view/pages/admin-page/admin-page.component";
+import {DashboardComponentComponent} from "./view/components/dashboard-component/dashboard-component.component";
+import {TableauModule} from "ngx-tableau";
+import { SearchResultComponent } from './view/components/search-result/search-result.component';
 
 export function tokenGetter() {
   return localStorage.getItem("token");
@@ -44,7 +47,8 @@ export function tokenGetter() {
 
 @NgModule({
   declarations: [
-    HandleBookComponent,
+    DashboardComponentComponent,
+    AdminPageComponent,
     AppComponent,
     LoginPageComponent,
     SignInPageComponent,
@@ -77,7 +81,8 @@ export function tokenGetter() {
     MesLivresComponentComponent,
     MesLivresCardComponent,
     UserDashboardComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,
@@ -90,6 +95,7 @@ export function tokenGetter() {
         tokenGetter: tokenGetter
       },
     }),
+    TableauModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

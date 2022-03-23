@@ -5,6 +5,8 @@ import { distinct,map } from 'rxjs/operators';
 import {Router} from "@angular/router";
 import {UserService} from "../../../service/user.service";
 import {IBookUserId} from "../../../models/IBookUserId";
+import {BookService} from "../../../service/book.service";
+import {IBookInfo} from "../../../models/IBookInfo";
 @Component({
   selector: 'app-user-card',
   templateUrl: './user-card.component.html',
@@ -13,21 +15,24 @@ import {IBookUserId} from "../../../models/IBookUserId";
 export class UserCardComponent implements AfterViewInit,OnInit {
 
   @Input() user:IUserInfo;
+  books:IBookInfo[] = []
 
   categories:string[] = []
-  constructor(private  router:Router, private userService:UserService) {
+  constructor(private  router:Router, private userService:UserService,private bookService:BookService) {
   }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   ngAfterViewInit(): void {
     if (this.user?.books != undefined){
-      console.log(this.user)
-      from(this.user?.books).pipe(map(book => book.category),distinct(),toArray()).subscribe(res =>
-        this.categories = res
-      )
+      this.user?.books.forEach(id => this.bookService.getBookWithCommentsById(id).subscribe(response => {
+        if (response.status == 200) {
+          this.books.push(response.data)
+          from(this.books).pipe(map(book => book.category),distinct(),toArray()).subscribe(res =>
+            this.categories = res
+          )
+        }
+      }))
     }
   }
 

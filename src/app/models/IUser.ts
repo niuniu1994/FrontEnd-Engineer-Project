@@ -10,7 +10,7 @@ export interface IUserInfo{
   firstName:string,
   lastName:string,
   address:IAddress
-  books:IBookInfo[]
+  books:string[]
 }
 
 export interface IAddress{

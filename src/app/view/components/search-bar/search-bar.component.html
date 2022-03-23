@@ -1,5 +1,16 @@
-<section class="row">
-    <div class="mx-auto mt-3 search-position">
-        <input class="search-design form-control shadow border-0" type="text" placeholder="Search..." aria-label="Search">
-      </div>
-</section>
+<!--<section class="row">-->
+<!--    <div class="mx-auto mt-3 search-position">-->
+<!--        <input class="search-design form-control shadow border-0" type="text" placeholder="Search..." aria-label="Search">-->
+<!--        <button>Search</button>-->
+<!--      </div>-->
+<!--</section>-->
+<div class="row">
+  <form [formGroup]="searchForm" id="form" role="search" class="mx-auto mt-3">
+  <input type="search" id="query" formControlName="search"
+    placeholder="Search...">
+  <button (click)="search()">Search</button>
+  </form>
+
+</div>
+
+

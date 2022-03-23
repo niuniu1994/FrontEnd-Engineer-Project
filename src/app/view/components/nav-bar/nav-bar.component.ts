@@ -10,7 +10,7 @@ import {JwtHelperService} from "@auth0/angular-jwt";
 export class NavBarComponent implements OnInit {
   opened = false;
   public username:any = "Login";
-  constructor(private router:Router,private authService:AuthService) {
+  constructor(private router:Router,public authService:AuthService) {
       if (this.authService.isAuthenticated()){
         this.username = this.authService.getUsername();
       }
@@ -26,5 +26,9 @@ export class NavBarComponent implements OnInit {
     }else {
       this.router.navigate(["profile"])
     }
+  }
+
+  logOut() {
+    this.authService.logOut();
   }
 }

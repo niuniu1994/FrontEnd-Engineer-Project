@@ -1,0 +1,123 @@
+<app-nav-bar></app-nav-bar>
+<div class="">
+    <div class="row row-cols-md-3 ">
+        <!-- email input -->
+        <div class="col">
+            <div class="card mt-5 border-0 radius ms-2 shadow">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="card-title text-muted">BONJOUR,</h1>
+                                <h3 class="card-subtitle mb-2 fs-1">{{userName}}</h3>
+                            </div>
+                            <div class="col">
+                                <div class="float-end">
+                                    <img src="assets/user1.png" width="97rem">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn mt-2 mb-4 ms-3 bold shadow btn-primary" type="button" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" data-bs-dismiss="modal">AJOUTER UN LIVRE</button>
+                            <div class="modal fade " id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+                                <app-livres-add></app-livres-add>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <!-- email input -->
+<!--            <div class="col" *ngFor="let arr of array1">-->
+<!--                <div class="card border-0 radius mt-5 me-2 shadow">-->
+<!--                    <div class="card-body">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col">-->
+<!--                                <h3 class="card-title">{{arr.title}}</h3>-->
+<!--                            </div>-->
+<!--                            <div class="col">-->
+<!--                                <div class="float-end">-->
+<!--                                    <img src="{{arr.logo}}" width="97rem">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="foot-card">-->
+<!--                            <p class="card-text">{{arr.description}}</p>-->
+<!--                            <a href="{{arr.link}}" class="card-link card-link-design">{{arr.linkdescription}} <app-chevrons></app-chevrons></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <!-- email input -->
+            <div class="col" *ngFor="let arr of array2">
+                <div class="card border-0 radius mt-5 me-2 shadow">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h3 class="card-title">{{arr.title}}</h3>
+                            </div>
+                            <div class="col">
+                                <div class="float-end">
+                                    <img src={{arr.logo}} width="97rem">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="foot-card">
+                            <p class="card-text">{{arr.description}}</p>
+                            <a href={{arr.link}} class="card-link card-link-design">{{arr.linkdescription}} <app-chevrons></app-chevrons></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <!-- email input -->
+            <div class="col" *ngFor="let arr of array3">
+                <div class="card border-0 radius mt-5 me-2 shadow">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h3 class="card-title">{{arr.title}}</h3>
+                            </div>
+                            <div class="col">
+                                <div class="float-end">
+                                    <img src={{arr.logo}} width="97rem">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="foot-card">
+                            <p class="card-text">{{arr.description}}</p>
+                            <a href={{arr.link}} class="card-link card-link-design">{{arr.linkdescription}} <app-chevrons></app-chevrons></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--            <div class="col" *ngFor="let arr of array4">-->
+<!--                <div class="card border-0 radius mt-5 me-2 shadow">-->
+<!--                    <div class="card-body">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col">-->
+<!--                                <h3 class="card-title">{{arr.title}}</h3>-->
+<!--                            </div>-->
+<!--                            <div class="col">-->
+<!--                                <div class="float-end">-->
+<!--                                    <img src={{arr.logo}} width="97rem">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="foot-card">-->
+<!--                            <p class="card-text">{{arr.description}}</p>-->
+<!--                            <a href={{arr.link}} class="card-link card-link-design">{{arr.linkdescription}} <app-chevrons></app-chevrons></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+        </div>
+    </div>
+
+</div>

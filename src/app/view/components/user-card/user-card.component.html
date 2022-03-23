@@ -59,11 +59,11 @@
         <h5 class="card-header radius title-design">Mes livres</h5>
 
         <div class="h-75 border-0 overflow-auto scroll-style">
-          <div *ngFor="let book of user.books">
+          <div *ngFor="let book of books">
             <div class="card-fav-style card mt-3 ms-2 me-2 shadow">
               <div class="">
                 <div class="float-start">
-                  <span><img src="{{book.thumbnail}}" class="shadow mt-2 ms-2 mb-2 img-style"></span>
+                  <span><img src="https://my-demo-bucket-123432134.s3.eu-central-1.amazonaws.com/image/{{book.thumbnail}}" class="shadow mt-2 ms-2 mb-2 img-style"></span>
                 </div>
                 <div class="float-right ms-2 mt-2">
                   <h3>{{book.title}}</h3>

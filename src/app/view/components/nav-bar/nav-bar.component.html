@@ -24,13 +24,7 @@
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item text-muted">
-            <a class="nav-link text-muted" href="#">ACCUEIL</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-muted" href="#">BOOKS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-muted" href="#">USERS</a>
+            <a class="nav-link text-muted" href="/">ACCUEIL</a>
             </li>
         </ul>
         <!-- Left links -->
@@ -46,14 +40,15 @@
 
         <!-- Avatar -->
         <div class="btn-group">
-       <button (click)="login()" type="button" class="btn shadow btn-group-design btn-Light dropdown-toggle btn-lg" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+       <button type="button" class="btn shadow btn-group-design btn-Light dropdown-toggle btn-lg" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="assets/user1.png" width="27rem"> {{username}}
           </button>
 
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                <li><a class="dropdown-item active" href="#">PROFIL</a></li>
-                <li><a class="dropdown-item" href="#">DECONNEXION</a></li>
-            </ul>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+            <li><a  class="dropdown-item"  (click)="login()" >PROFIL</a></li>
+            <li><a routerLink="/admin" class="dropdown-item"   *ngIf="authService.isAdmin()">ADMIN</a></li>
+            <li><a routerLink="/" class="dropdown-item" (click)="logOut()">DECONNEXION</a></li>
+          </ul>
         </div>
 
         </div>

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HandleBookComponent } from './handle-book.component';
+import { DashboardComponentComponent } from './dashboard-component.component';
 
-describe('HandleBookComponent', () => {
-  let component: HandleBookComponent;
-  let fixture: ComponentFixture<HandleBookComponent>;
+describe('DashboardComponentComponent', () => {
+  let component: DashboardComponentComponent;
+  let fixture: ComponentFixture<DashboardComponentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HandleBookComponent ]
+      declarations: [ DashboardComponentComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HandleBookComponent);
+    fixture = TestBed.createComponent(DashboardComponentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
