@@ -1,0 +1,23 @@
+<app-nav-bar></app-nav-bar>
+<section>
+  <div class="shadow tab-design table-radius">
+    <div>
+      <table class="table">
+        <ng-container *ngFor="let book of books  | slice: (page-1) * pageSize : page * pageSize">
+          <app-livres-card [book]="book"></app-livres-card>
+        </ng-container>
+      </table>
+    </div>
+  </div>
+  <nav class="shadow">
+    <ul class="pagination shadow pagination-style justify-content">
+      <li class="page-item">
+        <a class="page-link" (click)="previousPage()">Previous</a>
+      </li>
+
+      <li class="page-item">
+        <a class="page-link" (click)="nextPage()">Next</a>
+      </li>
+    </ul>
+  </nav>
+</section>
